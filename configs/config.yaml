@@ -1,0 +1,40 @@
+project:
+  name: "neuralrank"
+  version: "1.0.0"
+
+data:
+  dataset: "msmarco"
+  num_train_queries: 10000
+  num_eval_queries: 1000
+  max_docs_per_query: 100
+
+retrieval:
+  bm25_top_k: 100
+  dense_top_k: 100
+  final_top_k: 10
+
+model:
+  embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+  reranker_hidden_dim: 256
+  reranker_output_dim: 1
+  learning_rate: 0.001
+  batch_size: 32
+  epochs: 10
+
+kafka:
+  bootstrap_servers: "localhost:9092"
+  topic_clicks: "user-clicks"
+  topic_queries: "user-queries"
+
+redis:
+  host: "localhost"
+  port: 6379
+  ttl_seconds: 3600
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+
+mlflow:
+  tracking_uri: "http://localhost:5000"
+  experiment_name: "neuralrank-ltr"

@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.env
+data/raw/
+data/processed/
+models/checkpoints/
+*.log
+mlruns/
+.dvc/cache/
+node_modules/
+.next/
+*.faiss
