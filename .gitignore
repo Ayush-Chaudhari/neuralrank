@@ -1,12 +1,9 @@
-__pycache__/
-*.pyc
-.env
-data/raw/
-data/processed/
-models/checkpoints/
-*.log
+# Large index files
+data/
+models/
 mlruns/
-.dvc/cache/
-node_modules/
-.next/
-*.faiss
+mlflow.db
+reports/
+logs/
+frontend/.next/
+frontend/node_modules/
