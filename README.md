@@ -25,27 +25,8 @@
 ---
 
 ## 🏗️ System Architecture
-User Query
-↓
-RAG Query Expansion (LLM)
-↓
-┌─────────────────────────────────┐
-│         Retrieval Layer         │
-│  BM25 (100) + FAISS (100)      │
-│  → ~180 merged candidates       │
-└─────────────────────────────────┘
-↓
-Feature Engineering (10 features)
-↓
-LambdaRank Neural Reranker
-↓
-Hybrid Scoring (BM25 + Dense + Neural)
-↓
-Redis Personalization
-↓
-Top 10 Results → FastAPI → Next.js UI
-↓
-User Clicks → Kafka → Redis Feature Store
+<img width="347" height="523" alt="image" src="https://github.com/user-attachments/assets/32a7ad6a-a105-43f7-a505-6452d0f8ce23" />
+
 ---
 
 ## 🛠️ Tech Stack
@@ -82,36 +63,8 @@ User Clicks → Kafka → Redis Feature Store
 ---
 
 ## 📁 Project Structure
-neuralrank/
-├── src/
-│   ├── data/           # MS MARCO data pipeline
-│   │   └── loader.py
-│   ├── retrieval/      # BM25 + FAISS retrieval
-│   │   ├── bm25.py
-│   │   └── dense.py
-│   ├── features/       # Feature engineering + Redis store
-│   │   ├── extractor.py
-│   │   └── online_store.py
-│   ├── models/         # LambdaRank neural reranker
-│   │   └── lambdarank.py
-│   ├── rag/            # Query expansion pipeline
-│   │   └── pipeline.py
-│   ├── ranking/        # Hybrid reranker
-│   │   └── hybrid.py
-│   ├── signals/        # Kafka signal pipeline
-│   │   └── kafka_consumer.py
-│   ├── api/            # FastAPI server
-│   │   └── main.py
-│   ├── mlops/          # MLflow experiment tracking
-│   │   └── tracking.py
-│   └── monitoring/     # Evidently drift detection
-│       └── drift.py
-├── frontend/           # Next.js search UI
-├── configs/            # Configuration files
-│   └── config.yaml
-├── docker-compose.yml  # Infrastructure
-├── requirements.txt    # Python dependencies
-└── Dockerfile
+<img width="405" height="597" alt="image" src="https://github.com/user-attachments/assets/51cc4d44-ff75-4b43-b3a9-632b179f22a3" />
+
 ---
 
 ## 🚀 Quick Start
