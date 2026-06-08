@@ -8,6 +8,8 @@
 ![Next.js](https://img.shields.io/badge/Next.js-14-black)
 ![Docker](https://img.shields.io/badge/Docker-Compose-blue)
 ![MLflow](https://img.shields.io/badge/MLflow-2.13-orange)
+![NeuralRank Demo]<img width="1897" height="930" alt="image" src="https://github.com/user-attachments/assets/dd0bcd3d-c34a-4264-b6c6-56e5bf011672" />
+
 
 ---
 
